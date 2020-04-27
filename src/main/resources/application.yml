@@ -2,9 +2,21 @@ server:
   port: 7082
 
 spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/uni_db?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai&useSSL=false&autoReconnect=true&failOverReadOnly=false&allowPublicKeyRetrieval=true
+    username: root
+    password: 123456
+  main:
+    allow-bean-definition-overriding: true #当遇到同样名字的时候，是否允许覆盖注册
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database: mysql
+    show-sql: false
   mvc:
     servlet:
       path: /uni-register
+
 
 logging:
   level:
