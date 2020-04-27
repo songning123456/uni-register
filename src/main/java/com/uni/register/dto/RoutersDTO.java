@@ -10,9 +10,11 @@ import lombok.Data;
 @Data
 public class RoutersDTO {
 
-    private String ipPorts;
+    private String ipPort;
 
     private String url;
+
+    private Integer weight;
 
     private Boolean authority;
 }

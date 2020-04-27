@@ -10,6 +10,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * @author songning
  * @date 2020/4/27
@@ -28,11 +31,11 @@ public class RoutersServiceImpl implements RoutersService {
             commonDTO.setStatus(202);
             commonDTO.setMessage("~~~当前url为空~~~");
         } else {
-            RoutersEntity routersEntity = routersRepository.findRoutersEntityByUrl(url);
-            if (routersEntity != null) {
-                RoutersDTO dto = new RoutersDTO();
-                ClassConvertUtil.populate(routersEntity, dto);
-                commonDTO.setData(dto);
+            List<RoutersEntity> src = routersRepository.findAllByUrl(url);
+            if (src != null && !src.isEmpty()) {
+                List<RoutersDTO> target = new ArrayList<>();
+                ClassConvertUtil.populateList(src, target, RoutersDTO.class);
+                commonDTO.setDataList(target);
             } else {
                 commonDTO.setStatus(202);
                 commonDTO.setMessage("~~~统一路由表里不存在此url~~~");

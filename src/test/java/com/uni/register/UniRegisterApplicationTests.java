@@ -25,7 +25,19 @@ public class UniRegisterApplicationTests {
         entity.setCreateTime(new Date());
         entity.setDescription("测试路由");
         entity.setUrl("/uni-register/hello/say");
-        entity.setIpPorts("127.0.0.1:7082");
+        entity.setIpPort("127.0.0.1:7082");
+        routersRepository.save(entity);
+    }
+
+    @Test
+    public void contextLoads2() {
+        RoutersEntity entity = new RoutersEntity();
+        entity.setName("注册中心");
+        entity.setAuthority(false);
+        entity.setCreateTime(new Date());
+        entity.setDescription("获取注册中心");
+        entity.setUrl("/uni-register/routers/findRouter");
+        entity.setIpPort("127.0.0.1:7082");
         routersRepository.save(entity);
     }
 
