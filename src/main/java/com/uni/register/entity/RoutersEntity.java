@@ -14,7 +14,7 @@ import java.util.Date;
 @Data
 @Entity
 @GenericGenerator(name = "jpa-uuid", strategy = "uuid")
-@Table(name = "UniRouters")
+@Table(name = "Routers")
 public class RoutersEntity {
 
     @Id
@@ -28,12 +28,15 @@ public class RoutersEntity {
     @Column(name = "description", columnDefinition = "VARCHAR(128) COMMENT '路由简介'")
     private String description;
 
-    @Column(name = "ip", columnDefinition = "VARCHAR(128) NOT NULL COMMENT 'ip地址'")
-    private String ip;
+    @Column(name = "ipPorts", columnDefinition = "VARCHAR(128) NOT NULL COMMENT 'ip+port地址列表'")
+    private String ipPorts;
 
     @Column(name = "url", columnDefinition = "VARCHAR(128) NOT NULL UNIQUE COMMENT 'url'")
     private String url;
 
     @Column(name = "createTime", columnDefinition = "DATETIME NOT NULL COMMENT '创建时间'")
     private Date createTime;
+
+    @Column(name = "authority", columnDefinition = "tinyint(1) NOT NULL DEFAULT 0 COMMENT '是否需要权限'")
+    private Boolean authority;
 }
