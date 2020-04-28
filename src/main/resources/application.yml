@@ -16,7 +16,10 @@ spring:
   mvc:
     servlet:
       path: /uni-register
-
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 100MB
 
 logging:
   level:

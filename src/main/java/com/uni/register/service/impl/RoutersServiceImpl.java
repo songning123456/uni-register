@@ -35,7 +35,7 @@ public class RoutersServiceImpl implements RoutersService {
             if (src != null && !src.isEmpty()) {
                 List<RoutersDTO> target = new ArrayList<>();
                 ClassConvertUtil.populateList(src, target, RoutersDTO.class);
-                commonDTO.setDataList(target);
+                commonDTO.setData(target);
             } else {
                 commonDTO.setStatus(202);
                 commonDTO.setMessage("~~~统一路由表里不存在此url~~~");
