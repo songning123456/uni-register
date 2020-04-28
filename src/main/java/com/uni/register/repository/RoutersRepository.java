@@ -14,8 +14,6 @@ import java.util.List;
 @Repository
 public interface RoutersRepository extends JpaRepository<RoutersEntity, String> {
 
-    List<RoutersEntity> findAllByUrl(String url);
-
     @Override
     List<RoutersEntity> findAll();
 }
