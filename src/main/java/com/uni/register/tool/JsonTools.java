@@ -1,4 +1,4 @@
-package com.uni.register.util;
+package com.uni.register.tool;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -10,7 +10,7 @@ import java.io.IOException;
  * @date 2019/9/27
  * description
  */
-public class JsonUtil {
+public class JsonTools {
     private static ObjectMapper objectMapper = new ObjectMapper();
 
     public static String convertObject2String(Object object) {

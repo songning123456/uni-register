@@ -1,4 +1,4 @@
-package com.uni.register.util.classconvert.service;
+package com.uni.register.tool.classconvert.service;
 
 /**
  * @author songning

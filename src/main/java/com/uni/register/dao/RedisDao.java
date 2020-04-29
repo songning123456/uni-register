@@ -15,6 +15,10 @@ public class RedisDao {
     @Autowired
     private StringRedisTemplate stringRedisTemplate;
 
+    public String getValue(String key) {
+        return stringRedisTemplate.opsForValue().get(key);
+    }
+
     public void setValue(String key, String value) {
         stringRedisTemplate.opsForValue().set(key, value);
     }

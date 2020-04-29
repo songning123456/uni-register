@@ -1,8 +1,8 @@
-package com.uni.register.util;
+package com.uni.register.tool;
 
 
 import com.uni.register.annotation.AClassConvert;
-import com.uni.register.util.classconvert.ClassConvertContext;
+import com.uni.register.tool.classconvert.ClassConvertContext;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
@@ -11,7 +11,7 @@ import java.util.List;
 /**
  * @author sn
  */
-public class ClassConvertUtil {
+public class ClassConvertTools {
 
     /**
      * 将dto和entity之间的属性互相转换,dto中属性一般为String等基本类型

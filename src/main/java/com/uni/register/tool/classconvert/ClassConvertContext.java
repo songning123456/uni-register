@@ -1,6 +1,6 @@
-package com.uni.register.util.classconvert;
+package com.uni.register.tool.classconvert;
 
-import com.uni.register.util.classconvert.service.IClassConvert;
+import com.uni.register.tool.classconvert.service.IClassConvert;
 
 /**
  * @author songning

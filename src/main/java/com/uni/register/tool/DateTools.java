@@ -1,4 +1,4 @@
-package com.uni.register.util;
+package com.uni.register.tool;
 
 import java.text.DateFormat;
 import java.text.ParseException;
@@ -10,7 +10,7 @@ import java.util.Date;
  * @Author songning
  * @create 2019/7/24 13:31
  */
-public class DateUtil {
+public class DateTools {
 
     /**
      * java.util.Date => String
@@ -126,17 +126,17 @@ public class DateUtil {
      * @return
      */
     public static Date intervalTime(String strCurrentTime, int interval) {
-        Date currentTime = DateUtil.strToDate(strCurrentTime, "yyyy-MM-dd HH:mm:ss");
+        Date currentTime = DateTools.strToDate(strCurrentTime, "yyyy-MM-dd HH:mm:ss");
         Long oneDay = (long) (24 * 60 * 60 * 1000);
         Long lgCurrentTime = currentTime.getTime();
         Long lgStartTime = lgCurrentTime - (interval * oneDay);
         Date startTime = new Date(lgStartTime);
-        String strStartTime = DateUtil.dateToStr(startTime, "yyyy-MM-dd HH:mm:ss");
+        String strStartTime = DateTools.dateToStr(startTime, "yyyy-MM-dd HH:mm:ss");
         System.out.println(strStartTime);
         return startTime;
     }
 
     public static void main(String[] args) {
-       DateUtil.intervalTime("2019-12-15 11:16:37", 1923 - 1922 - 1);
+       DateTools.intervalTime("2019-12-15 11:16:37", 1923 - 1922 - 1);
     }
 }

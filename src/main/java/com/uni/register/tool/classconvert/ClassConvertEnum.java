@@ -1,8 +1,8 @@
-package com.uni.register.util.classconvert;
+package com.uni.register.tool.classconvert;
 
-import com.uni.register.util.classconvert.service.DateToStringImpl;
-import com.uni.register.util.classconvert.service.IClassConvert;
-import com.uni.register.util.classconvert.service.StringToDateImpl;
+import com.uni.register.tool.classconvert.service.DateToStringImpl;
+import com.uni.register.tool.classconvert.service.IClassConvert;
+import com.uni.register.tool.classconvert.service.StringToDateImpl;
 
 /**
  * @author songning

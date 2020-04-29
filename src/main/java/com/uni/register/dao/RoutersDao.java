@@ -1,11 +1,9 @@
 package com.uni.register.dao;
 
 import com.uni.register.common.Constant;
-import com.uni.register.dto.RoutersDTO;
 import com.uni.register.entity.RoutersEntity;
 import com.uni.register.repository.RoutersRepository;
-import com.uni.register.util.ClassConvertUtil;
-import com.uni.register.util.JsonUtil;
+import com.uni.register.tool.JsonTools;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -42,7 +40,12 @@ public class RoutersDao {
             }
         }
         for (Map.Entry<String, List<RoutersEntity>> item : map.entrySet()) {
-            redisDao.setValue(Constant.ROUTERS_CACHE + item.getKey(), JsonUtil.convertObject2String(item.getValue()));
+            redisDao.setValue(Constant.ROUTERS_CACHE + item.getKey(), JsonTools.convertObject2String(item.getValue()));
         }
+    }
+
+    public void updateRoutersToRedis(String url) {
+        List<RoutersEntity> src = routersRepository.findAllByUrl(url);
+        redisDao.setValue(Constant.ROUTERS_CACHE + url, JsonTools.convertObject2String(src));
     }
 }

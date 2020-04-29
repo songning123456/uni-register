@@ -1,7 +1,7 @@
-package com.uni.register.util.classconvert.service;
+package com.uni.register.tool.classconvert.service;
 
 
-import com.uni.register.util.DateUtil;
+import com.uni.register.tool.DateTools;
 
 import java.util.Date;
 
@@ -13,6 +13,6 @@ public class DateToStringImpl implements IClassConvert {
 
     @Override
     public Object classConvert(Object param) {
-        return DateUtil.dateToStr((Date) param, "yyyy-MM-dd HH:mm:ss");
+        return DateTools.dateToStr((Date) param, "yyyy-MM-dd HH:mm:ss");
     }
 }

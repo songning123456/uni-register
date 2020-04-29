@@ -16,4 +16,6 @@ public interface RoutersRepository extends JpaRepository<RoutersEntity, String> 
 
     @Override
     List<RoutersEntity> findAll();
+
+    List<RoutersEntity> findAllByUrl(String Url);
 }
