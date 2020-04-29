@@ -26,7 +26,7 @@ public class RoutersController {
 
     @PostMapping("/saveRoutersList")
     @AControllerAspect(description = "添加更新某一项目路由列表")
-    private CommonDTO<RoutersDTO> saveRoutersLists(@RequestBody List<RoutersVO> voList) {
+    public CommonDTO<RoutersDTO> saveRoutersLists(@RequestBody List<RoutersVO> voList) {
         CommonDTO<RoutersDTO> commonDTO = routersService.saveRoutersList(voList);
         return commonDTO;
     }
