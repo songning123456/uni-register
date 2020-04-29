@@ -16,5 +16,5 @@ public class RoutersDTO {
 
     private Integer weight;
 
-    private Boolean authority;
+    private Integer accessLevel;
 }

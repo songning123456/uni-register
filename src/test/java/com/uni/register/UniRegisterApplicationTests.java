@@ -24,7 +24,7 @@ public class UniRegisterApplicationTests {
     public void contextLoads() {
         RoutersEntity entity = new RoutersEntity();
         entity.setName("测试2");
-        entity.setAuthority(false);
+        entity.setAccessLevel(0);
         entity.setCreateTime(new Date());
         entity.setDescription("测试路由2");
         entity.setUrl("/uni-register/hello/say");

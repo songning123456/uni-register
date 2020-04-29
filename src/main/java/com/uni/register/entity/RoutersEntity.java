@@ -40,6 +40,6 @@ public class RoutersEntity {
     @Column(name = "createTime", columnDefinition = "DATETIME NOT NULL COMMENT '创建时间'")
     private Date createTime;
 
-    @Column(name = "authority", columnDefinition = "tinyint(1) NOT NULL DEFAULT 0 COMMENT '是否需要权限'")
-    private Boolean authority;
+    @Column(name = "accessLevel", columnDefinition = "INT NOT NULL DEFAULT 0 COMMENT '权限等级'")
+    private Integer accessLevel;
 }
