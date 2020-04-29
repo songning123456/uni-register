@@ -24,7 +24,7 @@ public class UniRegisterApplicationTests {
         entity.setAuthority(false);
         entity.setCreateTime(new Date());
         entity.setDescription("测试路由2");
-        entity.setUrl("/uni-register/hello/say");
+        entity.setUrl("/uni-register/hello/say2");
         entity.setIpPort("127.0.0.2:7082");
         routersRepository.save(entity);
     }
