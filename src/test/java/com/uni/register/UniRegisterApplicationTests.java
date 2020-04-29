@@ -22,14 +22,6 @@ public class UniRegisterApplicationTests {
 
     @Test
     public void contextLoads() {
-        RoutersEntity entity = new RoutersEntity();
-        entity.setName("测试2");
-        entity.setRoles("");
-        entity.setCreateTime(new Date());
-        entity.setDescription("测试路由2");
-        entity.setUrl("/uni-register/hello/say");
-        entity.setIpPort("127.0.0.2:7084");
-        entity = routersRepository.save(entity);
-        routersDao.updateRoutersToRedis(entity.getUrl());
+
     }
 }

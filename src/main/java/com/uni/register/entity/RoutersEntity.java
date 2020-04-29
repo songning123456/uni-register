@@ -14,7 +14,7 @@ import java.util.Date;
 @Data
 @Entity
 @GenericGenerator(name = "jpa-uuid", strategy = "uuid")
-@Table(name = "Routers", uniqueConstraints = {@UniqueConstraint(columnNames = {"ipPort", "url"})})
+@Table(name = "Routers", uniqueConstraints = {@UniqueConstraint(columnNames = {"requestType", "ipPort", "url"})})
 public class RoutersEntity {
 
     @Id
@@ -42,4 +42,7 @@ public class RoutersEntity {
 
     @Column(name = "roles", columnDefinition = "VARCHAR(128) COMMENT '权限'")
     private String roles;
+
+    @Column(name = "requestType", columnDefinition = "VARCHAR(25) COMMENT '请求类型'")
+    private String requestType;
 }
