@@ -39,6 +39,7 @@ public class RoutersDao {
                 map.put(item.getUrl(), values);
             }
         }
+        redisDao.deleteValues(Constant.ROUTERS_CACHE);
         for (Map.Entry<String, List<RoutersEntity>> item : map.entrySet()) {
             redisDao.setValue(Constant.ROUTERS_CACHE + item.getKey(), JsonTools.convertObject2String(item.getValue()));
         }

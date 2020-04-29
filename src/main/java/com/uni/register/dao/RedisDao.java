@@ -4,6 +4,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Component;
 
+import java.util.Set;
+
 /**
  * @author songning
  * @date 2020/4/29
@@ -21,5 +23,10 @@ public class RedisDao {
 
     public void setValue(String key, String value) {
         stringRedisTemplate.opsForValue().set(key, value);
+    }
+
+    public void deleteValues(String dir) {
+        Set<String> sets = stringRedisTemplate.keys(dir + "*");
+        stringRedisTemplate.delete(sets);
     }
 }
