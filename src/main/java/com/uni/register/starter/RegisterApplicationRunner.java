@@ -1,6 +1,5 @@
 package com.uni.register.starter;
 
-import com.uni.register.dao.RoutersDao;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
@@ -16,13 +15,9 @@ import org.springframework.stereotype.Component;
 @Slf4j
 public class RegisterApplicationRunner implements ApplicationRunner {
 
-    @Autowired
-    private RoutersDao routersDao;
-
     @Override
     public void run(ApplicationArguments args) {
         try {
-            routersDao.sendZkRouters();
         } catch (Exception e) {
             e.printStackTrace();
             log.info("发送Zookeeper Routers fail: {}", e.getMessage());
