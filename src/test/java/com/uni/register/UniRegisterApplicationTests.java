@@ -29,12 +29,12 @@ public class UniRegisterApplicationTests {
     @Test
     public void contextLoads() {
         RoutersEntity entity = new RoutersEntity();
-        entity.setName("测试");
+        entity.setName("测试2");
         entity.setAuthority(false);
         entity.setCreateTime(new Date());
-        entity.setDescription("测试路由");
+        entity.setDescription("测试路由2");
         entity.setUrl("/uni-register/hello/say");
-        entity.setIpPort("127.0.0.1:7082");
+        entity.setIpPort("127.0.0.2:7082");
         routersRepository.save(entity);
         routersDao.sendZkRouters();
     }
