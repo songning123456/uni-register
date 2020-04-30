@@ -30,7 +30,7 @@ public class RoutersDao {
         Map<String, List<RoutersEntity>> map = new HashMap<>(2);
         for (RoutersEntity item : src) {
             if (map.containsKey(item.getRequestType() + ":" + item.getUrl())) {
-                List<RoutersEntity> values = map.get(item.getUrl());
+                List<RoutersEntity> values = map.get(item.getRequestType() + ":" + item.getUrl());
                 values.add(item);
                 map.put(item.getRequestType() + ":" + item.getUrl(), values);
             } else {
