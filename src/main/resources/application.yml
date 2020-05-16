@@ -32,6 +32,19 @@ spring:
       max-file-size: 10MB
       max-request-size: 100MB
 
+dubbo:
+  application:
+    name: dubbo-provider
+  registry:
+    address: 192.168.0.108:2181
+    protocol: zookeeper
+    check: false
+  protocol:
+    name: dubbo
+    port: 30003
+  monitor:
+    protocol: register
+
 logging:
   level:
     root: warn
