@@ -22,7 +22,7 @@ public class RegisterApplicationRunner implements ApplicationRunner {
     @Override
     public void run(ApplicationArguments args) {
         try {
-//            routersDao.initRoutersToRedis();
+            routersDao.initRoutersToRedis();
         } catch (Exception e) {
             e.printStackTrace();
             log.info("发送Zookeeper Routers fail: {}", e.getMessage());

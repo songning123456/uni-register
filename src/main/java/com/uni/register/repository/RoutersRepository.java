@@ -19,5 +19,5 @@ public interface RoutersRepository extends JpaRepository<RoutersEntity, String> 
 
     List<RoutersEntity> findAllByUrl(String url);
 
-    List<RoutersEntity> findAllByRequestTypeAndUrl(String requestType, String Url);
+    List<RoutersEntity> findAllByRequestTypeAndUrl(String requestType, String url);
 }
