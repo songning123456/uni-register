@@ -7,7 +7,7 @@ spring:
 
 eureka:
   instance:
-    hostname: localhost #服务注册中心IP地址
+    hostname: 192.168.0.109 #服务注册中心IP地址
   client:
     register-with-eureka: false #是否向服务注册中心注册自己
     fetch-registry: false #是否检索服务
