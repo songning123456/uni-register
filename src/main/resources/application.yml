@@ -1,10 +1,18 @@
 server:
-  port: 7082
+  port: 7082 #服务注册中心端口号
 
 spring:
-  mvc:
-    servlet:
-      path: /uni-register
+  application:
+    name: uni-register
+
+eureka:
+  instance:
+    hostname: localhost #服务注册中心IP地址
+  client:
+    register-with-eureka: false #是否向服务注册中心注册自己
+    fetch-registry: false #是否检索服务
+    service-url: #服务注册中心的配置内容，指定服务注册中心的位置
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
 
 logging:
   level:
