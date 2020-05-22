@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: uni-register
+    name: uniRegister
 
 eureka:
   instance:
